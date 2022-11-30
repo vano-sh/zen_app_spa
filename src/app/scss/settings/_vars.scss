@@ -1,0 +1,45 @@
+// fonts
+$font-family: Nunito;
+
+// colors
+$bg-light-color: #fff;
+$bg-dark-color: #484848;
+$fnt-light-color: #000;
+$fnt-dark-color: #fff;
+
+$bg-color: var(--bg-color);
+$fnt-color: var(--fnt-color);
+
+.app {
+  --bg-color: #{$bg-light-color};
+  --fnt-color: #{$fnt-light-color};
+  &.dark {
+    --bg-color: #{$bg-dark-color};
+    --fnt-color: #{$fnt-dark-color};
+  }
+}
+
+// colors footer
+$bg-footer-color: #484848;
+$fnt-footer-color: #fff;
+
+// colors modal
+$fnt-base-modal-color: #222;
+$fnt-secondary-modal-color: #aaa;
+
+// colors animations
+$animate-color: #00a1ff;
+
+// breakpoints
+$breakpoint-md: 768px;
+$breakpoint-lg: 1152px;
+$breakpoint-xl: 1440px;
+
+// max-width
+$max-width-md: 690px;
+$max-width-lg: 930px;
+$max-width-xl: 1110px;
+
+// heights
+$height-header-xs: 50px;
+$height-header-lg: 80px;

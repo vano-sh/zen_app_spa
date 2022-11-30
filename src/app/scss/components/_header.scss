@@ -1,0 +1,111 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $height-header-xs;
+  background: $bg-light-color;
+  border-bottom: 1px solid #000;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    height: 100%;
+  }
+
+  &__nav {
+    flex: 1;
+  }
+  &__items {
+    display: none;
+  }
+
+  &__lang {
+    padding: 4px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    background: inherit;
+
+    @media (min-width: $breakpoint_lg) {
+      margin-left: 40px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-left: 50px;
+    }
+
+    select,
+    option {
+      background: inherit;
+      color: currentColor;
+    }
+  }
+
+  &__theme {
+    height: 30px;
+    margin-left: 20px;
+
+    @media (min-width: $breakpoint_lg) {
+      margin-left: 40px;
+    }
+
+    @media (min-width: $breakpoint_xl) {
+      margin-left: 50px;
+    }
+  }
+  &__burger {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    margin-left: 20px;
+
+    @media (min-width: $breakpoint_lg) {
+      display: none;
+    }
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: currentColor;
+      transition: background 0.2s;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      left: 0;
+      background: currentColor;
+      transition: transform 0.5s;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &.active {
+      span {
+        background: transparent;
+      }
+
+      &::before {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+      }
+    }
+  }
+}

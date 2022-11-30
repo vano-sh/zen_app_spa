@@ -1,0 +1,20 @@
+.cashback {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin: 30px 0;
+  }
+  &__body {
+    width: 100%;
+  }
+  &__order-btn {
+    margin-top: 20px;
+    width: 290px;
+    height: 50px;
+    border: 1px solid $fnt-secondary-modal-color;
+    border-radius: 30px;
+    font-size: 16px;
+  }
+}

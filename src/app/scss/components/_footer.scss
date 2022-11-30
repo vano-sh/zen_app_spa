@@ -1,0 +1,45 @@
+.footer {
+  padding: 0 15px;
+  background: $bg-footer-color;
+  color: $fnt-footer-color;
+
+  svg {
+    fill: $fnt-footer-color;
+  }
+  &__wrapper {
+    padding-top: 30px;
+  }
+
+  &__columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__list {
+    margin-top: 20px;
+  }
+
+  & .title {
+    font-size: 16px;
+  }
+
+  &__item {
+    margin: 10px 0;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__info {
+    margin-top: 30px;
+  }
+
+  &__copyright {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
