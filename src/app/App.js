@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { useFetch } from 'hooks/useFetch'
 import {
   Header,
@@ -7,14 +7,16 @@ import {
   Clients,
   Footer,
 } from 'components/layout'
+import { LangContext } from 'contexts'
 
 export const App = () => {
   const [data, setData] = useState(null)
+  const { lang } = useContext(LangContext)
   const { getData } = useFetch()
 
   useEffect(() => {
-    getData('en').then((data) => setData(data))
-  }, [])
+    getData(lang).then((data) => setData(data))
+  }, [lang])
 
   return (
     <div className='app'>
