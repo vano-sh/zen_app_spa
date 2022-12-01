@@ -1,5 +1,6 @@
 .app {
-  margin-top: calc($height-header-xs + 30px);
+  margin-top: calc($height-header-xs + 2px);
+  // padding-top: 30px;
   background: var(--bg-color);
   color: var(--fnt-color);
   fill: var(--fnt-color);

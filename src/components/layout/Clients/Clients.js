@@ -1,8 +1,13 @@
+import { useContext } from 'react'
+import { ThemeContext } from 'contexts'
+
 export const Clients = ({ data }) => {
   const className = 'clients'
   const { lightThemeClients, darkThemeClients } = data
+  const { theme } = useContext(ThemeContext)
 
-  const clients = lightThemeClients
+  const clients =
+    theme === 'light' ? lightThemeClients : darkThemeClients
 
   return (
     <section className={className}>

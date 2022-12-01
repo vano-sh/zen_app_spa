@@ -1,26 +1,36 @@
 import { useContext, useEffect, useState } from 'react'
+import { LangContext, ThemeContext } from 'contexts'
 import { useFetch } from 'hooks/useFetch'
 import {
   Header,
+  ProgressBar,
   SectionInfo,
   Cashback,
   Clients,
   Footer,
 } from 'components/layout'
-import { LangContext } from 'contexts'
+import clsx from 'clsx'
 
 export const App = () => {
+  const className = 'app'
+
   const [data, setData] = useState(null)
   const { lang } = useContext(LangContext)
-  const { getData } = useFetch()
+  const { theme } = useContext(ThemeContext)
+  const { isLoading, getData } = useFetch()
+
+  const classNames = clsx(className, {
+    dark: theme === 'dark',
+  })
 
   useEffect(() => {
     getData(lang).then((data) => setData(data))
   }, [lang])
 
   return (
-    <div className='app'>
+    <div className={classNames}>
       {data?.header && <Header data={data.header} />}
+      {!isLoading && <ProgressBar />}
       {data?.download && <SectionInfo data={data.download} />}
       {data?.warranty && <SectionInfo data={data.warranty} />}
       {data?.care && <SectionInfo data={data.care} />}

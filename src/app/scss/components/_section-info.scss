@@ -17,6 +17,7 @@
   }
 
   &__image {
+    display: flex;
     margin-top: 30px;
     border: 1px solid $fnt-secondary-modal-color;
     border-radius: 20px;

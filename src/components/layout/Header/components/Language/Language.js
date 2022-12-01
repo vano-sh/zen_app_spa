@@ -5,11 +5,9 @@ export const Language = ({ parentClassName }) => {
   const { lang, toggleLang } = useContext(LangContext)
 
   return (
-    <label
-      className={`${parentClassName}__lang`}
-      htmlFor='language'>
+    <label className={`${parentClassName}__lang`}>
       <select
-        id='language'
+        value={lang}
         onChange={(event) =>
           toggleLang(event.currentTarget.value)
         }>
