@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react'
 import { LangContext, ThemeContext } from 'contexts'
 import { useFetch } from 'hooks/useFetch'
 import {
+  Preloader,
   Header,
   ProgressBar,
   SectionInfo,
@@ -29,6 +30,7 @@ export const App = () => {
 
   return (
     <div className={classNames}>
+      {isLoading && <Preloader />}
       {data?.header && <Header data={data.header} />}
       {!isLoading && <ProgressBar />}
       {data?.download && <SectionInfo data={data.download} />}

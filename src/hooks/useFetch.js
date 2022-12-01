@@ -32,5 +32,5 @@ export const useFetch = () => {
     }
   }
 
-  return { getData, postData }
+  return { isLoading, getData, postData }
 }
