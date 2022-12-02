@@ -1,31 +1,12 @@
-import { useEffect } from 'react'
+import { useProgressBar } from 'hooks'
+import { useRef } from 'react'
 
 export const ProgressBar = () => {
-  useEffect(() => {
-    const heightDocument = window.outerHeight
-    const heightWindow = window.innerHeight
-    console.log({ window })
-    console.log()
-    console.log(heightDocument)
-    console.log(heightWindow)
+  const barRef = useRef(null)
 
-    const width = Math.round(heightDocument / heightWindow)
-
-    console.log(width)
-  }, [])
-
-  const width = () => {
-    const heightDocument = window.outerHeight
-    const heightWindow = window.innerHeight
-
-    return Math.round(heightDocument / heightWindow)
-  }
+  useProgressBar(barRef.current)
 
   return (
-    <div
-      className='progress-bar'
-      style={{
-        width: width(),
-      }}></div>
+    <div className='progress-bar' data-name='progress-bar'></div>
   )
 }
