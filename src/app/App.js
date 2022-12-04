@@ -9,6 +9,9 @@ import {
   Cashback,
   Clients,
   Footer,
+  Chatbot,
+  Modal,
+  ModalSlider,
 } from 'components/layout'
 import clsx from 'clsx'
 
@@ -39,6 +42,9 @@ export const App = () => {
       {data?.cashback && <Cashback data={data.cashback} />}
       {data?.clients && <Clients data={data.clients} />}
       {data?.footer && <Footer data={data.footer} />}
+      {data?.modal && <Modal data={data.modal} />}
+      {!isLoading && <Chatbot />}
+      {!isLoading && <ModalSlider />}
     </div>
   )
 }

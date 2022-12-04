@@ -1,8 +1,8 @@
 import LogoIcon from './assets/logo.svg'
 
-export const Logo = () => {
+export const Logo = ({ parentClassName }) => {
   return (
-    <button>
+    <button className={`${parentClassName}__logo`}>
       <LogoIcon />
     </button>
   )

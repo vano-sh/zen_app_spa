@@ -1,0 +1,50 @@
+.preview {
+  height: 72vw;
+  border: 1px solid #AAAAAA;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: zoom-in;
+
+  &::after {
+    content: url('../../components/Preview/assets/zoom.svg');
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    fill: #000;
+    background: #eee;
+    border-top-right-radius: 20px;
+  }
+
+  @media (min-width: $breakpoint_md) {
+    margin-top: 0;
+    height: 260px;
+  }
+
+  @media (min-width: $breakpoint_lg) {
+    height: 350px;
+  }
+
+  @media (min-width: $breakpoint_xl) {
+    height: 400px;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    @media (min-width: $breakpoint_lg) {
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

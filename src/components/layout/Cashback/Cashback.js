@@ -1,8 +1,15 @@
-import { Title, Text, Preview } from '../../common'
+import { FormContext } from 'contexts'
+import { useContext } from 'react'
+import { Title, Text } from '../../common'
 
 export const Cashback = ({ data }) => {
   const { name, title, texts, orderBtn } = data
   const className = 'cashback'
+  const { setIsModalActive } = useContext(FormContext)
+
+  const handleModalButtonActiveClick = () => {
+    setIsModalActive(true)
+  }
 
   return (
     <section className={className} data-name={name}>
@@ -11,11 +18,14 @@ export const Cashback = ({ data }) => {
           {title && <Title title={title} />}
 
           {texts.length > 0 &&
-            texts.map((text, index) => <Text key={index} text={text} />)}
+            texts.map((text, index) => (
+              <Text key={index} text={text} />
+            ))}
         </div>
         <button
           className={`${className}__order-btn`}
-          data-target={orderBtn.target}>
+          data-target={orderBtn.target}
+          onClick={handleModalButtonActiveClick}>
           {orderBtn.data}
         </button>
       </div>

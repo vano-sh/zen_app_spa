@@ -1,6 +1,6 @@
 .progress-bar {
   position: fixed;
-  top: $height-header-xs;
+  top: $height-header-xs - 2px;
   width: 0;
   height: 2px;
   background: $animate-color;

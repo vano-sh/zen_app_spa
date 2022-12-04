@@ -14,7 +14,7 @@ export const Header = ({ data }) => {
     <header className={className}>
       <div className={`${className}__wrapper`}>
         <nav className={`${className}__nav`}>
-          <Logo />
+          <Logo parentClassName={className} />
           <Menu
             menuItems={menuItems}
             parentClassName={className}
