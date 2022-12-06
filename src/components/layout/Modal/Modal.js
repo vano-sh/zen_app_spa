@@ -10,8 +10,6 @@ import { useBodyHidden } from 'hooks'
 export const Modal = ({ data }) => {
   const { title, form } = data
 
-  console.log(title)
-
   const {
     isModalActive,
     setIsModalActive,
@@ -59,9 +57,7 @@ export const Modal = ({ data }) => {
           <CloseIcon />
         </button>
 
-        {/* {title && (
-          <Title parentClassName={className}>{title.data}</Title>
-        )} */}
+        {title && <Title title={title}></Title>}
 
         {form && (
           <Form parentClassName={className} form={form} />

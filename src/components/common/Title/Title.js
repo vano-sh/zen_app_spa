@@ -2,7 +2,7 @@ import { useRef } from 'react'
 
 export const Title = ({ title }) => {
   const { data, priority } = title
-
+  
   const className = 'title'
 
   const titleRef = useRef()

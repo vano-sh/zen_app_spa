@@ -93,7 +93,7 @@ export const Form = ({ parentClassName, form }) => {
 
     setIsSending(true)
 
-    postData(`${lang}/orders.json`, order).then(
+    postData(`${lang}/orders`, order).then(
       () => {
         let timerID = setTimeout(() => {
           setIsSending(false)
