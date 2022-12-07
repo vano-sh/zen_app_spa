@@ -1,12 +1,13 @@
-import { useContext } from 'react'
 import { BurgerContext } from 'contexts'
+import { useContext } from 'react'
+import { MenuItem } from './components/MenuItem'
 import clsx from 'clsx'
 
 export const Menu = ({ menuItems, parentClassName }) => {
   const { isBurgerActive } = useContext(BurgerContext)
 
-  const className = `${parentClassName}__menu`
-  const classNames = clsx(className, {
+  const currentClassName = `${parentClassName}__menu`
+  const classNames = clsx(currentClassName, {
     active: isBurgerActive,
   })
 
@@ -14,12 +15,11 @@ export const Menu = ({ menuItems, parentClassName }) => {
     <ul className={classNames}>
       {menuItems.length > 0 &&
         menuItems.map((item, index) => (
-          <li
+          <MenuItem
             key={index}
-            className={`${parentClassName}__item`}
-            data-target={item.target}>
-            {item.data}
-          </li>
+            item={item}
+            parentClassName={parentClassName}
+          />
         ))}
     </ul>
   )

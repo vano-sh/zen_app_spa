@@ -3,8 +3,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-
     padding: 0 15px;
-    margin: 30px 0;
+    margin: 30px auto;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 0;
+      width: $max-width-md;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
 }

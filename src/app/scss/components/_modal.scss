@@ -46,6 +46,10 @@
     transition: all 0.5s;
     transform: translateY(-150vh);
     visibility: hidden;
+
+    & .title {
+      font-size: 18px;
+    }
   }
 
   &__submit {

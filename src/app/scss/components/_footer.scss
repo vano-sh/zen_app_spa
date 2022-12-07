@@ -7,13 +7,22 @@
     fill: $fnt-footer-color;
   }
   &__wrapper {
+    margin: 0 auto;
     padding-top: 30px;
+
+    @media (min-width: $breakpoint-md) {
+      width: $max-width-md;
+    }
   }
 
   &__columns {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
 
   &__list {
@@ -41,5 +50,9 @@
     display: block;
     text-align: center;
     margin-top: 10px;
+
+    &.off {
+      transform: translateY(0);
+    }
   }
 }

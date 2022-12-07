@@ -2,4 +2,8 @@
   margin-bottom: 10px;
   font-size: 30px;
   font-weight: 700;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: 36px;
+  }
 }

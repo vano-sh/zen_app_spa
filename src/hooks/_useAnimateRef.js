@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { showAnimateRef } from '../utils/helpers'
+import { showAnimateRef } from 'utils/helpers'
 
 export const useAnimateRef = (ref) => {
   useEffect(() => {

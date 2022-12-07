@@ -1,1 +1,1 @@
-export { Chatbot } from './Chatbot'
+export { Chatbot } from './_Chatbot'

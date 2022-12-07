@@ -1,8 +1,8 @@
-import { useFetch } from './useFetch'
-import { useProgressBar } from './useProgressBar'
-import { useAnimateDescripton } from './useAnimateDescripton'
-import { useAnimateRef } from './useAnimateRef'
-import { useBodyHidden } from './useBodyHidden'
+import { useFetch } from './_useFetch'
+import { useProgressBar } from './_useProgressBar'
+import { useAnimateDescripton } from './_useAnimateDescripton'
+import { useAnimateRef } from './_useAnimateRef'
+import { useBodyHidden } from './_useBodyHidden'
 
 export {
   useFetch,

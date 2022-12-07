@@ -1,9 +1,9 @@
-import { LangProvider } from './LangProvider'
-import { ThemeProvider } from './ThemeProvider'
-import { BurgerProvider } from './BurgerProvaider'
-import { ChatbotProvider } from './ChatbotProvider'
-import { FormProvider } from './FormProvider'
-import { SliderProvider } from './SliderProvider'
+import { LangProvider } from './_LangProvider'
+import { ThemeProvider } from './_ThemeProvider'
+import { BurgerProvider } from './_BurgerProvaider'
+import { ChatbotProvider } from './_ChatbotProvider'
+import { FormProvider } from './_FormProvider'
+import { SliderProvider } from './_SliderProvider'
 
 export {
   LangProvider,

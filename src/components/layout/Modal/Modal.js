@@ -1,11 +1,10 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { FormContext, LangContext } from 'contexts'
 import { useContext, useEffect } from 'react'
-import CloseIcon from './assets/close_icon.svg'
+import { useBodyHidden } from 'hooks'
 import { Title } from '../../common'
 import { Form, Success } from './components'
+import CloseIcon from './assets/close_icon.svg'
 import clsx from 'clsx'
-import { useBodyHidden } from 'hooks'
 
 export const Modal = ({ data }) => {
   const { title, form } = data

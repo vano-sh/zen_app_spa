@@ -1,5 +1,6 @@
 import { BurgerContext } from 'contexts'
 import { useContext } from 'react'
+import { useBodyHidden } from 'hooks'
 import clsx from 'clsx'
 
 export const Burger = ({ parentClassName }) => {
@@ -10,6 +11,8 @@ export const Burger = ({ parentClassName }) => {
   const classNames = clsx(className, {
     active: isBurgerActive,
   })
+
+  useBodyHidden(isBurgerActive)
 
   const btnClick = () => {
     setIsBurgerActive((prev) => !prev)

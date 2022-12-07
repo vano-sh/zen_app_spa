@@ -3,5 +3,6 @@
   top: $height-header-xs - 2px;
   width: 0;
   height: 2px;
+  z-index: $z-index_progress-bar;
   background: $animate-color;
 }

@@ -4,10 +4,19 @@
     flex-direction: column;
     align-items: center;
     padding: 0 15px;
-    margin: 30px 0;
+    margin: 30px auto;
+
+    @media (min-width: $breakpoint-md) {
+      padding: 0;
+      width: 460px;
+    }
   }
   &__body {
-    width: 100%;
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__order-btn {
     margin-top: 20px;

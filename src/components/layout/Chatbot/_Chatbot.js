@@ -1,8 +1,8 @@
 import { ChatbotContext } from 'contexts'
 import { useContext } from 'react'
+import { useBodyHidden } from 'hooks'
 import { Open, Chat } from './components'
 import clsx from 'clsx'
-import { useBodyHidden } from 'hooks'
 
 export const Chatbot = () => {
   const { isChatOpen, setIsChatOpen } =

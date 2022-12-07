@@ -1,9 +1,11 @@
 import { Text } from '../../../../common'
-import { Copyright } from './components/Copyright'
 import { Logo } from './components/Logo'
+import { Copyright } from './components/Copyright'
+import { useRef } from 'react'
+import { useAnimateRef } from '../../../../../hooks/_useAnimateRef'
 
 export const Info = ({ parentClassName, info }) => {
-  const { texts, copyright } = info
+  const { texts, copyright } = info  
 
   return (
     <div className={`${parentClassName}__info`}>

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { LangContext, ThemeContext } from 'contexts'
-import { useFetch } from 'hooks/useFetch'
+import { useFetch } from 'hooks'
 import {
   Preloader,
   Header,

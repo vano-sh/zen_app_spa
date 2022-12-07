@@ -7,11 +7,11 @@ import {
 } from './components'
 
 export const Header = ({ data }) => {
-  const { menuItems } = data
+  const { name, menuItems } = data
   const className = 'header'
 
   return (
-    <header className={className}>
+    <header className={className} data-name={name}>
       <div className={`${className}__wrapper`}>
         <nav className={`${className}__nav`}>
           <Logo parentClassName={className} />

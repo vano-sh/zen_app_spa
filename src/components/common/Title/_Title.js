@@ -1,11 +1,13 @@
 import { useRef } from 'react'
+import { useAnimateRef } from 'hooks'
 
 export const Title = ({ title }) => {
   const { data, priority } = title
-  
   const className = 'title'
 
   const titleRef = useRef()
+
+  useAnimateRef(titleRef)
 
   switch (priority) {
     case 6:

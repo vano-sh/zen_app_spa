@@ -4,8 +4,6 @@ import { Message } from './components'
 import { scrollToLastMessage } from 'utils/helpers'
 
 export const Dialog = ({ parentClassName }) => {
-  const dialogRef = useRef(null)
-
   const {
     isChatOpen,
     faq,
@@ -14,6 +12,8 @@ export const Dialog = ({ parentClassName }) => {
     setIsBotWriting,
   } = useContext(ChatbotContext)
   const { lang } = useContext(LangContext)
+
+  const dialogRef = useRef(null)
 
   const botBaseAnswer =
     lang === 'en'

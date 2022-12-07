@@ -1,5 +1,5 @@
-import { useRef, useContext, useEffect } from 'react'
 import { SliderContext } from 'contexts'
+import { useRef, useContext, useEffect } from 'react'
 import { useAnimateRef } from 'hooks'
 
 export const Preview = ({ image }) => {
@@ -9,6 +9,10 @@ export const Preview = ({ image }) => {
     useContext(SliderContext)
 
   useAnimateRef(previewRef)
+
+  useEffect(() => {
+    setSlides((prev) => [...prev, image])
+  }, [image])
 
   const handlePreviewClick = () => {
     const { top, left, height, width } =
@@ -26,10 +30,6 @@ export const Preview = ({ image }) => {
 
     setPreviewDetails(details)
   }
-
-  useEffect(() => {
-    setSlides((prev) => [...prev, image])
-  }, [image])
 
   return (
     <button

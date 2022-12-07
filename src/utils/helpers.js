@@ -1,30 +1,34 @@
 export const scrollToTop = () => {
   window.scroll({
     top: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 }
 
 export const scrollToSection = (targetName) => {
-  const $section = document.querySelector(`[data-name="${targetName}"]`)
+
+  const $section = document.querySelector(
+    `[data-name="${targetName}"]`
+  )
   const $header = document.querySelector('[data-name="header"]')
 
   const clientPosition = window.pageYOffset
   const sectionPosition = $section.getBoundingClientRect().top
   const headerHeight = $header.getBoundingClientRect().height
-  const targetPosition = clientPosition + sectionPosition - headerHeight
+  const targetPosition =
+    clientPosition + sectionPosition - headerHeight
 
   window.scrollTo({
     top: targetPosition,
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 }
 
 export const scrollToLastMessage = (dialog) => {
-
   if (!dialog) return
 
-  const lastMessage = dialog.childNodes[dialog.childNodes.length - 1]
+  const lastMessage =
+    dialog.childNodes[dialog.childNodes.length - 1]
 
   if (!lastMessage) return
 
@@ -32,7 +36,7 @@ export const scrollToLastMessage = (dialog) => {
 
   dialog.scrollTo({
     top: lastMessageTopPosition,
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 }
 
@@ -65,7 +69,7 @@ export const showAnimateRef = (ref) => {
   const screenHeight = window.screen.height
   const elementTopPosition = element.getBoundingClientRect().top
 
-  if ((screenHeight - 20) >= elementTopPosition) {
+  if (screenHeight - 20 >= elementTopPosition) {
     element.classList.remove('off')
     element.classList.add('on')
   } else {

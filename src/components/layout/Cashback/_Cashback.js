@@ -1,11 +1,17 @@
 import { FormContext } from 'contexts'
-import { useContext } from 'react'
+import { useContext, useRef } from 'react'
+import { useAnimateRef } from 'hooks'
 import { Title, Text } from '../../common'
 
 export const Cashback = ({ data }) => {
   const { name, title, texts, orderBtn } = data
   const className = 'cashback'
+
   const { setIsModalActive } = useContext(FormContext)
+
+  const btnRef = useRef(null)
+
+  useAnimateRef(btnRef)
 
   const handleModalButtonActiveClick = () => {
     setIsModalActive(true)
@@ -25,7 +31,8 @@ export const Cashback = ({ data }) => {
         <button
           className={`${className}__order-btn`}
           data-target={orderBtn.target}
-          onClick={handleModalButtonActiveClick}>
+          onClick={handleModalButtonActiveClick}
+          ref={btnRef}>
           {orderBtn.data}
         </button>
       </div>

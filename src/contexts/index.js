@@ -1,9 +1,9 @@
-import { LangContext } from './LangContext'
-import { ThemeContext } from './ThemeContext'
-import { BurgerContext } from './BurgerContext'
-import { SliderContext } from './SliderContext'
-import { ChatbotContext } from './ChatbotContext'
-import { FormContext } from './FormContext'
+import { LangContext } from './_LangContext'
+import { ThemeContext } from './_ThemeContext'
+import { BurgerContext } from './_BurgerContext'
+import { SliderContext } from './_SliderContext'
+import { ChatbotContext } from './_ChatbotContext'
+import { FormContext } from './_FormContext'
 
 export {
   LangContext,

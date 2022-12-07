@@ -1,11 +1,23 @@
 .section-info {
   &__wrapper {
+    margin: 0 auto;
     padding: 0 15px;
     padding-top: 30px;
+
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 0;
+      padding-top: 30px;
+      width: $max-width-md;
+    }
   }
 
   &__body {
-    margin-top: 10px;
+    @media (min-width: $breakpoint-md) {
+      width: 50%;
+    }
   }
 
   &__links {
@@ -13,6 +25,12 @@
       display: block;
       height: 44px;
       margin-top: 15px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+      justify-content: space-between;
+      max-width: 320px;
     }
   }
 
@@ -22,5 +40,14 @@
     border: 1px solid $fnt-secondary-modal-color;
     border-radius: 20px;
     overflow: hidden;
+
+    @media (min-width: $breakpoint-md) {
+      margin-top: 0;
+      width: 50%;
+
+      &.reverse {
+        order: -1;
+      }
+    }
   }
 }

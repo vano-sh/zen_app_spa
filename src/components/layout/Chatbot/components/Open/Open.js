@@ -1,8 +1,7 @@
-import { ChatbotContext } from 'contexts'
-import { LangContext } from 'contexts'
+import { ChatbotContext, LangContext } from 'contexts'
 import { memo, useContext } from 'react'
-import { API_BASE_URL } from 'constants/api'
 import { useFetch } from 'hooks'
+import { API_BASE_URL } from 'constants/api'
 import chatbot from './assets/chatbot.gif'
 
 export const Open = memo(({ parentClassName }) => {
@@ -12,7 +11,6 @@ export const Open = memo(({ parentClassName }) => {
 
   const { isChatOpen, setIsChatOpen, setFaq } =
     useContext(ChatbotContext)
-
   const { lang } = useContext(LangContext)
 
   const { getData } = useFetch(API_BASE_URL)
@@ -20,7 +18,7 @@ export const Open = memo(({ parentClassName }) => {
   const handleOpenClick = () => {
     setIsChatOpen(true)
 
-    getData(`${lang}/faq.json`).then(
+    getData(`${lang}/faq`).then(
       (data) => setFaq(data),
       (error) => console.error(error)
     )

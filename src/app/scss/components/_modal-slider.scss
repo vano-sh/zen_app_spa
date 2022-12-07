@@ -31,7 +31,6 @@
     animation-iteration-count: infinite;
 
     @keyframes blink {
-
       0% {
         opacity: 0;
       }
@@ -51,15 +50,10 @@
     z-index: 1;
     display: flex;
     background: #fff;
-    border: 1px solid #AAAAAA;
+    border: 1px solid #aaaaaa;
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.5s;
-
-    svg {
-      height: 100px;
-      width: 100px;
-    }
 
     &__close {
       position: absolute;
@@ -70,11 +64,6 @@
       width: 40px;
       background: #e9e9e9;
       fill: #000;
-
-      svg {
-        width: 50%;
-        height: 50%;
-      }
     }
 
     &__slides {
@@ -102,11 +91,6 @@
 
       &:disabled {
         display: none;
-      }
-
-      svg {
-        width: 20%;
-        height: 100%;
       }
     }
 
