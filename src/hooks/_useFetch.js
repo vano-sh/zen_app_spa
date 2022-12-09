@@ -5,11 +5,12 @@ export const useFetch = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   const getData = async (endPoint) => {
+    setIsLoading(true)
+
     try {
       const response = await fetch(
         `${API_BASE_URL}${endPoint}.json`
       )
-      setIsLoading(false)
       return response.json()
     } catch (error) {
       console.error(error)
@@ -32,5 +33,5 @@ export const useFetch = () => {
     }
   }
 
-  return { isLoading, getData, postData }
+  return { isLoading, setIsLoading, getData, postData }
 }

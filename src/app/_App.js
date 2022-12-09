@@ -21,14 +21,16 @@ export const App = () => {
   const [data, setData] = useState(null)
   const { lang } = useContext(LangContext)
   const { theme } = useContext(ThemeContext)
-  const { isLoading, getData } = useFetch()
+  const { isLoading, setIsLoading, getData } = useFetch()
 
   const classNames = clsx(className, {
     dark: theme === 'dark',
   })
 
   useEffect(() => {
-    getData(lang).then((data) => setData(data))
+    getData(lang)
+      .then((data) => setData(data))
+      .then(() => setIsLoading(false))
   }, [lang])
 
   return (
