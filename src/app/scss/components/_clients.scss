@@ -11,5 +11,9 @@
       width: $max-width-md;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    @media (min-width: $breakpoint-lg) {
+      width: $max-width-lg;
+    }
   }
 }

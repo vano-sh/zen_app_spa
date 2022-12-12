@@ -1,1 +1,1 @@
-export { Columns } from './Columns'
+export { Columns } from './_Columns'

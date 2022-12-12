@@ -12,6 +12,11 @@
       padding-top: 30px;
       width: $max-width-md;
     }
+
+    @media (min-width: $breakpoint-lg) {
+      width: $max-width-lg;
+      font-size: 18px;
+    }
   }
 
   &__body {

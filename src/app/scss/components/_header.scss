@@ -4,17 +4,27 @@
   right: 0;
   left: 0;
   z-index: $z-index_header;
+  display: flex;
+  justify-content: center;
+  padding: 10px 15px;
   height: $height-header-xs;
   background: var(--bg-color);
+  border-bottom: 2px solid var(--fnt-color);
 
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 15px;
     height: 100%;
-    border-bottom: 2px solid var(--fnt-color);
     background: inherit;
+
+    @media (min-width: $breakpoint-md) {
+      width: $max-width-md;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      width: $max-width-lg;
+    }
   }
 
   &__nav {

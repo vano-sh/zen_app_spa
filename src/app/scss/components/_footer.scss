@@ -1,17 +1,25 @@
 .footer {
-  padding: 0 15px;
+  padding: 30px 15px;
   background: $bg-footer-color;
   color: $fnt-footer-color;
 
   svg {
     fill: $fnt-footer-color;
   }
+
   &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0 auto;
-    padding-top: 30px;
 
     @media (min-width: $breakpoint-md) {
       width: $max-width-md;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      width: $max-width-lg;
+      font-size: 16px;
     }
   }
 
@@ -19,6 +27,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    width: 100%;
 
     @media (min-width: $breakpoint-md) {
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -44,15 +53,26 @@
 
   &__info {
     margin-top: 30px;
+
+    @media (min-width: $breakpoint-md) {
+      width: 500px;
+    }
   }
 
   &__copyright {
-    display: block;
-    text-align: center;
     margin-top: 10px;
 
     &.off {
       transform: translateY(0);
+    }
+
+    @media (min-width: $breakpoint-md) {
+      margin-top: 30px;
+      margin-left: 30px;
+
+      &.off {
+        transform: translateY(30px);
+      }
     }
   }
 }

@@ -8,11 +8,12 @@ export const Copyright = ({ parentClassName, copyright }) => {
   useAnimateRef(copyrightRef)
 
   return (
-    <a
+    <div
       className={`${parentClassName}__copyright`}
-      href={copyright.url}
       ref={copyrightRef}>
-      <CopyrightIcon />
-    </a>
+      <a href={copyright.url}>
+        <CopyrightIcon />
+      </a>
+    </div>
   )
 }
