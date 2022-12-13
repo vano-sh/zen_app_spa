@@ -12,7 +12,7 @@ module.exports = {
   },
   mode: process.env.NODE_ENV || 'development',
   devServer: {
-    port: 3000,
+    port: 3100,
   },
   resolve: {
     modules: [path.resolve(__dirname, 'src'), 'node_modules'],
@@ -65,6 +65,15 @@ module.exports = {
         use: [
           {
             loader: '@svgr/webpack',
+            options: {
+              svgo: {
+                plugins: [
+                  {
+                    removeViewBox: false,
+                  },
+                ],
+              },
+            },
           },
         ],
       },
