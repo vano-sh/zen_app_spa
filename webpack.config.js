@@ -50,29 +50,26 @@ module.exports = {
         test: /\.(png|jpg|gif)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash][ext]',
+          filename: 'images/[hash][ext]',
         },
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[hash][ext]',
+          filename: 'fonts/[hash][ext]',
         },
       },
       {
         test: /\.(svg)$/,
         use: [
           {
+            loader: 'babel-loader',
+          },
+          {
             loader: '@svgr/webpack',
             options: {
-              svgo: {
-                plugins: [
-                  {
-                    removeViewBox: false,
-                  },
-                ],
-              },
+              dimensions: false,
             },
           },
         ],

@@ -26,10 +26,16 @@
   }
 
   &__links {
+    width: 150px;
+
     a {
       display: block;
       height: 44px;
       margin-top: 15px;
+    }
+
+    svg {
+      width: 100%;
     }
 
     @media (min-width: $breakpoint-md) {
