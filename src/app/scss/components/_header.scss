@@ -10,7 +10,7 @@
   border-bottom: 2px solid var(--fnt-color);
 
   @media (min-width: $breakpoint-lg) {
-    height: $height-header-lg;
+    height: $height-header-lg + 2px;
   }
 
   &__wrapper {
@@ -28,11 +28,12 @@
     }
 
     @media (min-width: $breakpoint-lg) {
+      padding: 20px 0;
       width: $max-width-lg;
     }
 
     @media (min-width: $breakpoint_xl) {
-      max-width: $max_width_xl;
+      width: $max_width_xl;
     }
   }
 
@@ -45,16 +46,12 @@
     @media (min-width: $breakpoint_lg) {
       display: flex;
       align-items: center;
+      font-size: 20px;
     }
   }
 
   &__logo {
     height: 100%;
-
-    svg {
-      height: 100%;
-      width: 100%;
-    }
 
     @media (min-width: $breakpoint_lg) {
       height: 40px;
@@ -153,8 +150,6 @@
 
   &__lang {
     padding: 4px;
-    height: 100%;
-    width: 50px;
     border: 1px solid currentColor;
     border-radius: 4px;
     background: inherit;
@@ -171,6 +166,10 @@
     option {
       background: inherit;
       color: currentColor;
+
+      @media (min-width: $breakpoint_lg) {
+        font-size: 18px;
+      }
     }
   }
 
@@ -178,10 +177,6 @@
     margin-left: 20px;
     height: 100%;
     width: 30px;
-
-    svg {
-      width: 100%;
-    }
 
     @media (min-width: $breakpoint_lg) {
       margin-left: 40px;

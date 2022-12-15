@@ -4,15 +4,15 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: var(--z-index_preloader);
+  z-index: $z-index_preloader;
   display: flex;
   justify-content: center;
   align-items: center;
   background: var(--bg-color);
-  fill: var(--fill);
+  fill: var(--fnt-color);
 
   svg {
-    width: 160px;
+    width: 100px;
     animation: bounceIn 1s infinite;
   }
 

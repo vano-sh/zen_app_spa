@@ -3,4 +3,8 @@
   background: var(--bg-color);
   color: var(--fnt-color);
   fill: var(--fnt-color);
+
+  @media (min-width: $breakpoint_lg) {
+    margin-top: $height-header-lg;
+  }
 }

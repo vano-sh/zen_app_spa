@@ -5,4 +5,8 @@
   height: 2px;
   z-index: $z-index_progress-bar;
   background: $animate-color;
+
+  @media (min-width: $breakpoint-lg) {
+    top: $height-header-lg;
+  }
 }

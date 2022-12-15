@@ -1,1 +1,1 @@
-export { ModalSlider } from './ModalSlider'
+export { ModalSlider } from './_ModalSlider'

@@ -17,6 +17,11 @@
       width: $max-width-lg;
       font-size: 18px;
     }
+
+    @media (min-width: $breakpoint-xl) {
+      width: $max-width-xl;
+      font-size: 20px;
+    }
   }
 
   &__body {
@@ -26,22 +31,15 @@
   }
 
   &__links {
-    width: 150px;
-
     a {
       display: block;
       height: 44px;
       margin-top: 15px;
     }
 
-    svg {
-      width: 100%;
-    }
-
     @media (min-width: $breakpoint-md) {
       display: flex;
-      justify-content: space-between;
-      max-width: 320px;
+      gap: 20px;
     }
   }
 

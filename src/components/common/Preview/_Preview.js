@@ -1,14 +1,11 @@
 import { SliderContext } from 'contexts'
 import { useRef, useContext, useEffect } from 'react'
-import { useAnimateRef } from 'hooks'
 
 export const Preview = ({ image }) => {
   const previewRef = useRef(null)
 
   const { setPreviewDetails, setSlides } =
     useContext(SliderContext)
-
-  useAnimateRef(previewRef)
 
   useEffect(() => {
     setSlides((prev) => [...prev, image])

@@ -64,8 +64,14 @@
     }
   }
 
+  &__logo {
+    width: 216px;
+  }
+
   &__copyright {
+    align-self: flex-start;
     margin-top: 10px;
+    width: 130px;
 
     &.off {
       transform: translateY(0);
@@ -74,6 +80,7 @@
     @media (min-width: $breakpoint-md) {
       margin-top: 30px;
       margin-left: 30px;
+      width: 160px;
 
       &.off {
         transform: translateY(30px);
