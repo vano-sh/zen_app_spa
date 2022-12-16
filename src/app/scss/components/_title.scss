@@ -3,28 +3,26 @@
   font-weight: 700;
   font-size: 26px;
 
-  &h1 {
+  h1 {
     font-size: 30px;
   }
 
   @media (min-width: $breakpoint-md) {
     font-size: 30px;
 
-    &h1 {
+    h1 {
       font-size: 36px;
     }
   }
   @media (min-width: $breakpoint-lg) {
     font-size: 36px;
-
-    &h1 {
+    h1  {
       font-size: 42px;
     }
   }
   @media (min-width: $breakpoint-xl) {
     font-size: 42px;
-
-    &h1 {
+    h1 {
       font-size: 56px;
     }
   }
