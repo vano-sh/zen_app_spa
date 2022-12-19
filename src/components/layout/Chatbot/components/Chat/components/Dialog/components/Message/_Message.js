@@ -1,5 +1,6 @@
 import { ChatbotContext } from 'contexts'
 import { useContext } from 'react'
+import { getCurrentTime } from 'utils/helpers'
 import clsx from 'clsx'
 
 export const Message = ({ talker, messageType, message }) => {
@@ -42,8 +43,7 @@ export const Message = ({ talker, messageType, message }) => {
             </ol>
 
             <span className={`${className}__date`}>
-              {/* getCurrentTime() */}
-              05:05
+              {getCurrentTime()}
             </span>
           </div>
         )
@@ -54,8 +54,7 @@ export const Message = ({ talker, messageType, message }) => {
             {message}
 
             <span className={`${className}__date`}>
-              {/* getCurrentTime() */}
-              05:05
+              {getCurrentTime()}
             </span>
           </div>
         )
@@ -68,8 +67,7 @@ export const Message = ({ talker, messageType, message }) => {
         {message}
 
         <span className={`${className}__date`}>
-          {/* getCurrentTime() */}
-          05:05
+          {getCurrentTime()}
         </span>
       </div>
     )

@@ -3,6 +3,18 @@ body {
   font-family: $font-family;
   font-size: 14px;
 
+  @media (min-width: $breakpoint-md) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    font-size: 20px;
+  }
+
   &.overflow-hidden {
     overflow: hidden;
   }

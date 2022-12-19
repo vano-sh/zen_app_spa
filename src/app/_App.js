@@ -1,5 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
-import { LangContext, ThemeContext } from 'contexts'
+import {
+  LangContext,
+  ThemeContext,
+  SliderContext,
+  ChatbotContext,
+} from 'contexts'
 import { useFetch } from 'hooks'
 import {
   Preloader,
@@ -21,6 +26,8 @@ export const App = () => {
   const [data, setData] = useState(null)
   const { lang } = useContext(LangContext)
   const { theme } = useContext(ThemeContext)
+  const { setSlides } = useContext(SliderContext)
+  const { setMessages } = useContext(ChatbotContext)
   const { isLoading, setIsLoading, getData } = useFetch()
 
   const classNames = clsx(className, {
@@ -31,6 +38,8 @@ export const App = () => {
     getData(lang)
       .then((data) => setData(data))
       .then(() => setIsLoading(false))
+      .then(() => setSlides([]))
+      .then(() => setMessages([]))
   }, [lang])
 
   return (

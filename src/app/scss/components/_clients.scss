@@ -15,5 +15,9 @@
     @media (min-width: $breakpoint-lg) {
       width: $max-width-lg;
     }
+
+    @media (min-width: $breakpoint-lg) {
+      width: $max-width-xl;
+    }
   }
 }

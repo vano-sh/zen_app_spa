@@ -1,1 +1,1 @@
-export { Policy } from './Policy'
+export { Policy } from './_Policy'

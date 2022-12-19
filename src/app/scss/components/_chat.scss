@@ -11,6 +11,7 @@
   border-radius: 10px;
   transition: bottom 0.5s;
   visibility: hidden;
+  font-size: 16px;
 
   @media (min-width: $breakpoint_md) {
     right: 8vw;
@@ -63,7 +64,6 @@
       }
 
       @keyframes flashing {
-
         0%,
         100% {
           opacity: 1;
@@ -140,7 +140,7 @@
 
   &__footer {
     background: #f4f4f4;
-    border-top: 1px solid hsla(0, 0%, 67%, .5);
+    border-top: 1px solid hsla(0, 0%, 67%, 0.5);
     padding: 5px 10px;
   }
 
@@ -160,7 +160,6 @@
     height: 100%;
     padding: 3px 10px;
     width: 100%;
-
 
     &.error {
       border: 1px solid #ff0000;
@@ -185,10 +184,18 @@
   }
 
   &__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     fill: #fff;
     background: #1facf7;
     border-radius: 50%;
     height: 36px;
     width: 36px;
+
+    svg {
+      width: 50%;
+      height: 50%;
+    }
   }
 }

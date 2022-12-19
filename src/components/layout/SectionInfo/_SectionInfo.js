@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { useAnimateRef } from 'hooks'
 import { Title, Text, Preview } from '../../common'
-import { Link } from './ui/Link'
+import { Link } from './components/Link'
 import clsx from 'clsx'
 
 export const SectionInfo = ({ data }) => {

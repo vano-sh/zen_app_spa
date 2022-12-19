@@ -6,7 +6,6 @@ export const scrollToTop = () => {
 }
 
 export const scrollToSection = (targetName) => {
-
   const $section = document.querySelector(
     `[data-name="${targetName}"]`
   )
@@ -103,4 +102,8 @@ export const throttle = (func, timeout) => {
       })
     }, timeout)
   }
+}
+
+export const getCurrentTime = () => {
+  return new Date().toLocaleTimeString().slice(0, -3)
 }
