@@ -3,7 +3,7 @@
 /.vscode
 
 # production
-/build
+#/build
 
 # misc
 .env
